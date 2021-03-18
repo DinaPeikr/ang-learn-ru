@@ -1,0 +1,10 @@
+<div *appExchangeRates="let rate from rates autoplay mode interval ms; controller as ctrl; index as i "
+     (mouseenter)="prev.showArrows(); next.showArrows()"
+     (mouseleave)="prev.hideArrows(); next.hideArrows()"
+     fxLayout="row"
+     fxLayoutAlign="start center"
+>
+  <button mat-button (click)="ctrl.prevItem()" appHidden #prev="hiddenControl"><mat-icon>keyboard_arrow_left</mat-icon></button>
+  <span> {{rate.value | currency: rate.currency: 'symbol-narrow'}}</span>
+  <button mat-button (click)="ctrl.nextItem()" appHidden #next="hiddenControl"><mat-icon>keyboard_arrow_right</mat-icon></button>
+</div>

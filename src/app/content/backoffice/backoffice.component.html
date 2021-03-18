@@ -1,0 +1,19 @@
+<div class="main-inner">
+  <app-header [title]="title" [drawerFromHeader]="drawerFromHome"></app-header>
+  <div class="content">
+    <app-side-menu (setDrawerControl)="setDrawer($event)">
+      <div class="menu">
+        <h2 class="pl-2 pr-2 mb-0">Menu</h2>
+        <mat-list role="list">
+          <mat-list-item role="listitem">Item 1</mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+      </div>
+
+      <router-outlet></router-outlet>
+    </app-side-menu>
+
+  </div>
+  <app-footer></app-footer>
+</div>

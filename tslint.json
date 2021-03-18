@@ -116,13 +116,16 @@
         }
       ]
     },
-    "variable-name": {
-      "options": [
-        "ban-keywords",
-        "check-format",
-        "allow-pascal-case"
-      ]
-    },
+    "variable-name": false
+//    {
+//      "options": [
+//        "ban-keywords",
+//        "check-format",
+//        "allow-pascal-case"
+//      ]
+//    }
+  ,
+    "no-shadowed-variable": false,
     "whitespace": {
       "options": [
         "check-branch",

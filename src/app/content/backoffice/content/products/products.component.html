@@ -1,0 +1,22 @@
+<mat-form-field appearance="legacy">
+  <mat-label>Search by products</mat-label>
+  <input matInput placeholder="Search..." #searchInput (input)="searchProductByTitle(searchInput.value)">
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  <mat-hint>Hint</mat-hint>
+</mat-form-field>
+
+<mat-checkbox class="example-margin" color="primary" (change)="toggleFavoriteProducts($event)">Show only
+  favorites
+</mat-checkbox>
+
+<div class="row-flex">
+  <app-shop-card class="card"
+                 [product]="product"
+                 [index]="i"
+                 *ngFor="let product of (products$ | async ) | productsFilter: searchText: hasFavorites;
+                      index as i;">
+  </app-shop-card>
+</div>
+<mat-spinner class="loading" *ngIf="loading$ | async"></mat-spinner>
+
+

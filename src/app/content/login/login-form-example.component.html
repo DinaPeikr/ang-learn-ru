@@ -1,0 +1,23 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="mt-30">
+  <button [routerLink]="['/signup']">Go to SignUp</button>
+<h2>Login</h2>
+
+<!-- банан в коробке -->
+<!-- [ngModel]="value" (ngModelChange)="value" -->
+<h3><u>банан в коробке</u></h3>
+<input type="text" [(ngModel)]="value">
+<p>{{value}}</p>
+
+<!-- ref -->
+<h3><u>ref</u></h3>
+<input type="text" ngModel #c="ngModel" name="username" required minlength="5">
+<p>{{c.name}}</p>
+<p>{{c.valueChanges | async}}</p>
+<p>{{c.valid}}</p>
+
+<!-- программное решение / reactive forms -->
+<h3><u>программное решение / reactive forms</u></h3>
+<input type="text" [formControl]="usernameCtrl" name="username">
+<p>{{usernameCtrl.value}}</p>
+<p>{{usernameCtrl.valid}}</p>
+</div>

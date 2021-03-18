@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+   <div fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="toggleSideNavFromHeader()">menu</mat-icon>
+    </button>
+    <span [routerLink]="['/']" class="pointer"> {{OwnTitle}} </span>
+     <app-exchange-rates></app-exchange-rates>
+   </div>
+<!--    <span class="example-spacer"></span>-->
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button class="example-icon">
+      <mat-icon [matBadge]="cartProductCount$ | async" matBadgeColor="warn" [routerLink]="['/backoffice/cart']">shopping_cart</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon (click)="setShare($event)">share</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

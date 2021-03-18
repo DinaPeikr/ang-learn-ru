@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="auth-content mt-30">
+  <mat-card>
+    <mat-card-content>
+      <form #form=ngForm (submit)="login(form.value)">
+        <h3>Login to continue...</h3>
+        <div>
+          <mat-form-field appearance="legacy" fxFlex="100">
+            <mat-label>User Name</mat-label>
+            <input matInput
+                   placeholder="Username"
+                   type="text"
+                   ngModel
+                   name="username"
+                   required
+                   appUserValidator
+                   #uc="ngModel">
+          </mat-form-field>
+          <mat-error *ngIf="uc.errors?.onlyLetters">{{uc.errors?.onlyLetters}}</mat-error>
+        </div>
+        <div>
+          <mat-form-field appearance="legacy" fxFlex="100">
+            <mat-label>Password</mat-label>
+            <input matInput
+                   placeholder="Password"
+                   type="password"
+                   ngModel
+                   name="password"
+                   required
+                   minlength="5"
+                   #pc="ngModel"
+            >
+          </mat-form-field>
+<!--          <mat-error *ngIf="pc.errors">{{pc.errors?.minlength['actualLength'] + '/' +  pc.errors?.minlength['requiredLength']}}</mat-error>-->
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <button mat-button [routerLink]="['/signup']">Go to SignUp</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Log In</button>
+        </div>
+      </form>
+    </mat-card-content>
+
+<!--    <mat-card-footer>-->
+<!--      <pre>-->
+<!--&lt;!&ndash;    {{form.value | json}}&ndash;&gt;-->
+<!--&lt;!&ndash;    {{c.valid}}&ndash;&gt;-->
+<!--&lt;!&ndash;    {{uc.errors | json}}&ndash;&gt;-->
+<!--&lt;!&ndash;    {{pc.errors | json}}&ndash;&gt;-->
+<!--      </pre>-->
+<!--    </mat-card-footer>-->
+  </mat-card>
+
+
+</div>

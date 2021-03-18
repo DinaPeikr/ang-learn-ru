@@ -1,0 +1,9 @@
+.close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.mat-card {
+  padding-bottom: 24px;
+}

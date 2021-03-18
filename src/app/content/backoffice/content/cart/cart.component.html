@@ -1,0 +1,11 @@
+<div *ngIf="(products$|async).length; else notice"></div>
+<app-cart-product *ngFor="let product of products$ | async; trackBy: trackByFn;"
+    [product]="product"
+    (increment)="increment(product)"
+    (decrement)="decrement(product)"
+    (remove)="remove(product)"
+></app-cart-product>
+<ng-template #notice><span>Cart is Empty</span></ng-template>
+
+<app-deafult [user]="person1"></app-deafult>
+<app-on-push [user]="person2"></app-on-push>

@@ -1,0 +1,23 @@
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-btn{
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.example-sidenav {
+  padding: 20px;
+  min-width: 150px;
+}
+

@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-icon class="close-btn" (click)="cancel()">close</mat-icon>
+  <mat-card-header>
+    <mat-card-title>{{product?.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Price: {{product?.price}}</p>
+    <mat-icon *ngIf="product.isFavorite" color="accent">favorite</mat-icon>
+    <mat-icon *ngIf="!product.isFavorite" color="primary">favorite_border</mat-icon>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row" fxLayoutAlign="space-evenly stretch">
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+    <button mat-raised-button color="primary" (click)="cancel()">Cancel</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,137 @@
+html, body {
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+}
+
+.main {
+  flex: 1;
+}
+
+.pl-2 {
+  padding-left: 16px;
+}
+
+.pr-2 {
+  padding-right: 16px;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/*.menu {*/
+/*  list-style: none;*/
+/*}*/
+
+/*.menu li {*/
+/*  min-width: 150px;*/
+/*}*/
+
+/*.menu li a {*/
+/*  display: block;*/
+/*  padding: 10px 0;*/
+/*}*/
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mat-card-image {
+  object-fit: contain;
+  height: 250px;
+}
+
+.example-header-image {
+  background-image: unset;
+  background-size: cover;
+}
+
+.card {
+  flex: 0 1 33.333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.mat-icon.favorite {
+  cursor: pointer;
+}
+
+.favorite-icon {
+  order: -1;
+}
+
+app-products {
+  width: 100%;
+  height: 100%;
+}
+
+app-one-product {
+  align-self: center;
+  width: 100%;
+}
+app-cart{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+app-cart-product{
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  max-width: 500px;
+  flex: 1;
+  text-align: center;
+}
+.pointer{
+  cursor: pointer;
+}
+.app-switcher-label{
+  color: rgba(0,0,0,.54);
+}
+mat-card .mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 450px !important;
+  width: 100% !important;
+}
+@media only screen and (max-width: 992px) {
+  .card {
+    flex: 0 1 50%;
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex: 0 1 100%;
+
+  }
+}

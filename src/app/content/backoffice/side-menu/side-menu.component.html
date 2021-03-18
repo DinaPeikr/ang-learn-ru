@@ -1,0 +1,13 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <ng-content select=".menu"></ng-content>
+<!--    <div #contentMenu></div>-->
+  </mat-drawer>
+  <mat-drawer-content>
+<!--    <button type="button" mat-raised-button color="warn" class="toggle-btn" (click)="toggleSideNavFromItSelf()">-->
+<!--      Toggle sidenav-->
+<!--    </button>-->
+    <ng-content></ng-content>
+<!--<div #contentBlock></div>-->
+  </mat-drawer-content>
+</mat-drawer-container>
